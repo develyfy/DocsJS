@@ -2,6 +2,10 @@
 
 Reusable static documentation template with a clean landing page, article navigation, changelog layout, and a set of UI blocks for product docs.
 
+## Preview
+
+![Project screenshot](./assets/screenshot.png)
+
 ## Features
 
 - Documentation home page with hero, categories, and footer
