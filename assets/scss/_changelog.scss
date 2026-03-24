@@ -1,0 +1,126 @@
+.changelog-head {
+  max-width: 50rem;
+  margin-bottom: calc(3rem + 50px);
+}
+
+.changelog-head h1 {
+  margin: 0 0 0.85rem;
+  font-size: clamp(2rem, 3.2vw, 2.85rem);
+  letter-spacing: -0.06em;
+  line-height: 1;
+}
+
+.changelog-head p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 4.5rem;
+  padding-top: 0.5rem;
+  padding-left: 0.7rem;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 0.38rem;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line-strong);
+}
+
+.timeline-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.95rem;
+  padding-left: 2.2rem;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -0.54rem;
+  top: 0.12rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background-color: rgba(234, 238, 246, 0.44);
+  box-shadow: 0 0 0 3px rgb(29 30 32);
+}
+
+.timeline-date {
+  color: var(--muted);
+  font-size: 0.98rem;
+  line-height: 1.2;
+}
+
+.timeline-card {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 2.5rem;
+  align-items: start;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.timeline-main h2 {
+  margin: 0 0 1.1rem;
+  max-width: 29rem;
+  font-size: clamp(1.55rem, 2.3vw, 2.1rem);
+  letter-spacing: -0.06em;
+  line-height: 1.12;
+}
+
+.timeline-tags {
+  gap: 0.55rem;
+  margin-bottom: 0;
+}
+
+.timeline-tags span {
+  padding: 0.34rem 0.62rem;
+  border: 1px solid var(--line-strong);
+  border-radius: 0.68rem;
+  color: var(--text);
+  font-size: 0.76rem;
+  font-weight: 700;
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.timeline-version {
+  padding: 0.2rem 0 0;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.timeline-version-label {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  color: var(--text);
+  font-size: 0.8rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.timeline-version ul {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+  padding-left: 1rem;
+}
+
+.timeline-version li {
+  color: var(--muted);
+  font-size: 0.88rem;
+  line-height: 1.5;
+}

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Docs</title>
+        <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="assets/css/main.min.css" />
+    </head>
+    <body>
+        <div class="shell">
+            <div class="app-frame">
+                <header class="topbar">
+                    <div class="brand">
+                        <button class="menu-toggle" type="button" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+                            <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                                <path d="M4 7.25A.75.75 0 0 1 4.75 6.5h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 7.25Zm0 4.75a.75.75 0 0 1 .75-.75h14.5a.75.75 0 0 1 0 1.5H4.75A.75.75 0 0 1 4 12Zm.75 4a.75.75 0 0 0 0 1.5h14.5a.75.75 0 0 0 0-1.5H4.75Z"></path>
+                            </svg>
+                        </button>
+                        <button class="logo-button" type="button" aria-label="Docs home" data-route="home">
+                            <span class="logo-mark"></span>
+                            <span class="brand-name">Docs</span>
+                        </button>
+                        <nav class="primary-nav" aria-label="Primary navigation">
+                            <button class="nav-link is-active" type="button" data-route="home">Documentation</button>
+                            <button class="nav-link" type="button" data-route="changelog">Changelog</button>
+                        </nav>
+                    </div>
+                    <button class="theme-toggle" type="button" id="themeToggle" aria-label="Toggle theme">
+                        <span class="theme-icon" aria-hidden="true">
+                            <svg class="icon-moon" viewBox="0 0 24 24" focusable="false">
+                                <path d="M9 0.417a1.155 1.155 0 0 1 .12 1.287A10.8 10.8 0 0 0 7.803 6.9c0 6.032 4.917 10.916 10.977 10.916q1.188-.002 2.3-.24a1.185 1.185 0 0 1 1.215.474 1.095 1.095 0 0 1-.047 1.339A12.525 12.525 0 0 1 12.516 24C5.602 24 0 18.43 0 11.565C0 6.4 3.171 1.969 7.686 0.09A1.125 1.125 0 0 1 9 0.417"></path>
+                            </svg>
+                            <svg class="icon-sun" viewBox="0 0 24 24" focusable="false">
+                                <path d="M12 18a6 6 0 1 0 0-12a6 6 0 0 0 0 12M12 0a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3A.75.75 0 0 1 12 0m0 19.5a.75.75 0 0 1 .75.75v3a.75.75 0 0 1-1.5 0v-3a.75.75 0 0 1 .75-.75m12-7.5a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1 0-1.5h3A.75.75 0 0 1 24 12M4.5 12a.75.75 0 0 1-.75.75h-3a.75.75 0 0 1 0-1.5h3A.75.75 0 0 1 4.5 12m15.985-8.485a.75.75 0 0 1 0 1.06l-2.121 2.122a.75.75 0 1 1-1.06-1.061l2.12-2.121a.75.75 0 0 1 1.06 0m-13.79 13.79a.75.75 0 0 1 0 1.06L4.575 20.485a.75.75 0 0 1-1.06-1.06l2.12-2.121a.75.75 0 0 1 1.06 0m13.79 3.182a.75.75 0 0 1-1.06 0l-2.121-2.122a.75.75 0 1 1 1.06-1.06l2.121 2.12a.75.75 0 0 1 0 1.061M6.697 6.697a.75.75 0 0 1-1.06 0L3.515 4.575a.75.75 0 1 1 1.06-1.06l2.122 2.12a.75.75 0 0 1 0 1.061"></path>
+                            </svg>
+                        </span>
+                    </button>
+                </header>
+
+                <div class="layout">
+                    <aside class="sidebar">
+                        <label class="search">
+                            <span class="search-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" focusable="false">
+                                    <path d="M10.5 4a6.5 6.5 0 1 1 0 13a6.5 6.5 0 0 1 0-13Zm0 2a4.5 4.5 0 1 0 0 9a4.5 4.5 0 0 0 0-9Zm8.91 10.5l.09.08l2.5 2.5l-1.41 1.41l-2.5-2.5l-.08-.09l1.4-1.4Z"></path>
+                                </svg>
+                            </span>
+                            <input id="searchInput" type="search" aria-label="Search sections" placeholder="Search..." />
+                            <span class="search-key">Ctrl K</span>
+                        </label>
+
+                        <nav class="side-nav" aria-label="Documentation sections">
+                            <div class="side-group side-group-mobile">
+                                <h3>Pages</h3>
+                                <button class="side-link" type="button" data-route="home">Documentation</button>
+                                <button class="side-link side-link-page" type="button" data-route="changelog">Changelog</button>
+                            </div>
+
+                            <div class="side-group">
+                                <h3>Getting Started</h3>
+                                <button class="side-link is-active" type="button" data-doc="introduction">Introduction</button>
+                                <button class="side-link" type="button" data-doc="syntax">Syntax and Structure</button>
+                                <button class="side-link" type="button" data-doc="control-flow">Control Flow</button>
+                                <button class="side-link" type="button" data-doc="functions">Functions</button>
+                                <button class="side-link" type="button" data-doc="objects-arrays">Objects and Arrays</button>
+                                <button class="side-link" type="button" data-doc="es6">ES6+ Features</button>
+                            </div>
+
+                            <div class="side-group">
+                                <h3>Advanced</h3>
+                                <button class="side-link" type="button" data-doc="async">Asynchronous JavaScript</button>
+                                <button class="side-link" type="button" data-doc="modules">Modules and Imports</button>
+                            </div>
+
+                            <div class="side-group">
+                                <h3>Browser</h3>
+                                <button class="side-link" type="button" data-doc="dom">DOM Manipulation</button>
+                                <button class="side-link" type="button" data-doc="events">Event Handling</button>
+                                <button class="side-link" type="button" data-doc="forms">Forms and Input Handling</button>
+                            </div>
+
+                            <div class="side-group">
+                                <h3>Backend and Frameworks</h3>
+                                <button class="side-link" type="button" data-doc="web-api">Web API</button>
+                                <button class="side-link" type="button" data-doc="performance">Compatibility and Performance</button>
+                            </div>
+
+                            <div class="side-group">
+                                <h3>UI</h3>
+                                <button class="side-link" type="button" data-doc="ui-code">Code and Inline</button>
+                                <button class="side-link" type="button" data-doc="ui-callouts">Callouts and Badges</button>
+                                <button class="side-link" type="button" data-doc="ui-navigation">Tabs and Steps</button>
+                                <button class="side-link" type="button" data-doc="ui-api">API and Tables</button>
+                                <button class="side-link" type="button" data-doc="ui-content">Content and Media</button>
+                                <button class="side-link" type="button" data-doc="ui-feedback">FAQ and States</button>
+                            </div>
+                        </nav>
+                    </aside>
+                    <button class="sidebar-overlay" id="sidebarOverlay" type="button" aria-label="Close navigation"></button>
+
+                    <main class="content">
+                        <section class="page page-home is-visible" data-page="home">
+                            <div class="hero">
+                                <div class="hero-pill">
+                                    <span class="pill-new">v2.4</span>
+                                    <span class="hero-pill-text">Async handling update</span>
+                                </div>
+                                <h1>Documentation Template</h1>
+                                <p>Reusable documentation layout for guides, components, API references, release notes, and product knowledge bases.</p>
+                                <div class="hero-actions">
+                                    <button class="button button-primary" type="button" data-route="doc" data-doc-target="introduction">Introduction</button>
+                                    <span class="hero-separator">or</span>
+                                    <button class="button button-secondary" type="button" data-route="changelog">Start a new project</button>
+                                </div>
+                            </div>
+
+                            <section class="categories">
+                                <h2>Explore by categories</h2>
+                                <div class="category-grid">
+                                    <button class="category-card" type="button" data-route="doc" data-doc-target="introduction">
+                                        <h3>Getting Started</h3>
+                                        <p>Use this area for onboarding, setup instructions, and first steps for readers.</p>
+                                    </button>
+                                    <button class="category-card" type="button" data-route="doc" data-doc-target="async">
+                                        <h3>Components</h3>
+                                        <p>Document reusable UI patterns, blocks, examples, and implementation details.</p>
+                                    </button>
+                                    <button class="category-card" type="button" data-route="doc" data-doc-target="dom">
+                                        <h3>API Reference</h3>
+                                        <p>Describe endpoints, request parameters, responses, states, and integration rules.</p>
+                                    </button>
+                                    <button class="category-card" type="button" data-route="doc" data-doc-target="web-api">
+                                        <h3>Release Notes</h3>
+                                        <p>Track changes, feature updates, fixes, deprecations, and version history.</p>
+                                    </button>
+                                </div>
+                            </section>
+
+                            <footer class="home-footer">
+                                <div class="footer-brand">
+                                    <span class="footer-copy">Develyfy &copy; <span id="footerYear"></span></span>
+                                </div>
+                                <div class="footer-socials">
+                                    <a href="#" class="social-button" aria-label="Telegram">
+                                        <svg viewBox="0 0 24 24" focusable="false">
+                                            <path d="M21.28 4.56a1.5 1.5 0 0 0-1.6-.21L3.5 11.27a1.5 1.5 0 0 0 .14 2.8l4.12 1.4l1.58 5.06a1.5 1.5 0 0 0 2.58.58l2.3-2.78l3.96 2.9a1.5 1.5 0 0 0 2.36-.88l2.2-14.18a1.5 1.5 0 0 0-.46-1.61ZM9.3 14.88l-.72 3.05l-.92-2.95l8.57-6.84L9.3 14.88Z"></path>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-button" aria-label="Threads">
+                                        <svg viewBox="0 0 16 16" focusable="false">
+                                            <path d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161"/>
+                                        </svg>
+                                    </a>
+                                    <a href="#" class="social-button" aria-label="YouTube">
+                                        <svg viewBox="0 0 24 24" focusable="false">
+                                            <path d="M21.58 7.19a2.8 2.8 0 0 0-1.97-1.98C17.88 4.75 12 4.75 12 4.75s-5.88 0-7.61.46A2.8 2.8 0 0 0 2.42 7.2C1.96 8.93 1.96 12 1.96 12s0 3.07.46 4.8a2.8 2.8 0 0 0 1.97 1.98c1.73.46 7.61.46 7.61.46s5.88 0 7.61-.46a2.8 2.8 0 0 0 1.97-1.98c.46-1.73.46-4.8.46-4.8s0-3.07-.46-4.8ZM10.06 15.05V8.95L15.33 12l-5.27 3.05Z"></path>
+                                        </svg>
+                                    </a>
+                                </div>
+                            </footer>
+                        </section>
+
+                        <section class="page page-doc" data-page="doc">
+                            <div class="doc-layout">
+                                <article class="doc-article" id="docArticle"></article>
+                                <aside class="toc">
+                                    <p>On this page</p>
+                                    <nav id="tocNav" aria-label="Table of contents"></nav>
+                                </aside>
+                            </div>
+                        </section>
+
+                        <section class="page page-changelog" data-page="changelog">
+                            <div class="changelog-head">
+                                <h1>Changelog</h1>
+                                <p>See the latest feature releases, product improvements and bug fixes.</p>
+                            </div>
+
+                            <div class="timeline">
+                                <article class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">January 23, 2025</div>
+                                    <div class="timeline-card">
+                                        <div class="timeline-main">
+                                            <h2>Performance Boost &amp; New Features</h2>
+                                            <div class="timeline-tags">
+                                                <span>App</span>
+                                                <span>UI</span>
+                                                <span>CMS</span>
+                                            </div>
+                                        </div>
+                                        <aside class="timeline-version">
+                                            <span class="timeline-version-label">Version 1.2.0</span>
+                                            <ul>
+                                                <li>Optimized rendering and interaction performance.</li>
+                                                <li>Added new object utility methods for daily workflows.</li>
+                                                <li>Improved internationalization handling across the UI.</li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </article>
+
+                                <article class="timeline-item">
+                                    <div class="timeline-dot"></div>
+                                    <div class="timeline-date">January 15, 2025</div>
+                                    <div class="timeline-card">
+                                        <div class="timeline-main">
+                                            <h2>Improved Navigation and Search</h2>
+                                            <div class="timeline-tags">
+                                                <span>Docs</span>
+                                                <span>Search</span>
+                                            </div>
+                                        </div>
+                                        <aside class="timeline-version">
+                                            <span class="timeline-version-label">Version 1.1.4</span>
+                                            <ul>
+                                                <li>Refined sidebar hierarchy for large documentation trees.</li>
+                                                <li>Added faster search feedback and cleaner empty states.</li>
+                                                <li>Improved keyboard navigation and shortcut discoverability.</li>
+                                            </ul>
+                                        </aside>
+                                    </div>
+                                </article>
+                            </div>
+                        </section>
+                    </main>
+                </div>
+            </div>
+        </div>
+
+        <div class="image-lightbox" id="imageLightbox" aria-hidden="true">
+            <button class="image-lightbox-close" id="imageLightboxClose" type="button" aria-label="Close image">
+                <svg viewBox="0 0 24 24" focusable="false" aria-hidden="true">
+                    <path d="M6.97 5.97a.75.75 0 0 1 1.06 0L12 9.94l3.97-3.97a.75.75 0 1 1 1.06 1.06L13.06 11l3.97 3.97a.75.75 0 1 1-1.06 1.06L12 12.06l-3.97 3.97a.75.75 0 0 1-1.06-1.06L10.94 11L6.97 7.03a.75.75 0 0 1 0-1.06Z"></path>
+                </svg>
+            </button>
+            <img id="imageLightboxImg" alt="" />
+        </div>
+        <script src="assets/js/app.js"></script>
+    </body>
+</html>

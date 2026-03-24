@@ -1,0 +1,90 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-color: var(--scrollbar-thumb) var(--scrollbar-track);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow-x: clip;
+}
+
+body.is-sidebar-open {
+  overflow: hidden;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+html::-webkit-scrollbar-track,
+body::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+
+html::-webkit-scrollbar-thumb,
+body::-webkit-scrollbar-thumb {
+  border: 1px solid transparent;
+  border-radius: 999px;
+  background: var(--scrollbar-thumb);
+  background-clip: padding-box;
+}
+
+body[data-page="home"] {
+  background:
+    radial-gradient(900px 420px at 18% 0%, var(--glow-a), transparent 72%),
+    radial-gradient(1100px 520px at 82% 0%, var(--glow-b), transparent 72%),
+    var(--bg);
+}
+
+::selection {
+  background: rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background: rgba(0, 0, 0, 0.78);
+  color: #ffffff;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  background: none;
+  color: inherit;
+}
+
+.shell {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 65px;
+  overflow-x: clip;
+}
+
+.app-frame {
+  position: relative;
+  isolation: isolate;
+  width: min(100%, 1400px);
+  margin: 0 auto;
+}
+
+.page {
+  display: none;
+}
+
+.page.is-visible {
+  display: block;
+}

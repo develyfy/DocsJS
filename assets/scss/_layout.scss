@@ -1,0 +1,12 @@
+.layout {
+  display: grid;
+  grid-template-columns: 18.5rem minmax(0, 1fr);
+  min-height: calc(100vh - 65px);
+}
+
+.content {
+  position: relative;
+  isolation: isolate;
+  padding: 1.5rem 2rem 3rem;
+  overflow: visible;
+}
